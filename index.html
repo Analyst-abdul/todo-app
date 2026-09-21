@@ -1,13 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>todo-app</title>
+    <title>Abdul — Data &amp; Research Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="nav">
+      <a class="mark" href="#top">ABDUL<span>.</span></a>
+      <nav>
+        <a href="#practice">Practice</a>
+        <a href="#work">Approach</a>
+        <a href="#insights">Insights</a>
+        <a href="#comments">Comments</a>
+      </nav>
+      <a class="nav-cta" href="#comments">Leave a note</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Independent practice · Data &amp; research</p>
+        <h1>
+          Evidence, not noise.<br />
+          <em>Insight you can brief.</em>
+        </h1>
+        <p class="lede">
+          I help teams turn messy data and open questions into clear findings —
+          models, narratives, and recommendations that survive a boardroom.
+        </p>
+        <div class="hero-meta">
+          <div>
+            <strong>Data analyst</strong>
+            <span>Pipelines, dashboards, statistical modeling</span>
+          </div>
+          <div>
+            <strong>Research analyst</strong>
+            <span>Literature, fieldwork, policy &amp; market briefs</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="split">
+        <div>
+          <p class="eyebrow">The practice</p>
+          <h2>Where numbers meet judgment.</h2>
+          <p>
+            I work at the intersection of quantitative analysis and qualitative
+            research. That means cleaning the dataset <em>and</em> reading the
+            context it came from — so the story you ship is defensible.
+          </p>
+          <ul class="ticks">
+            <li>Exploratory analysis &amp; hypothesis testing</li>
+            <li>Survey design, coding, and synthesis</li>
+            <li>KPI frameworks and executive reporting</li>
+            <li>Competitive, policy, and market research</li>
+          </ul>
+        </div>
+        <aside class="card-stack">
+          <article>
+            <span>01</span>
+            <h3>Diagnose</h3>
+            <p>Scope the question, audit sources, map what “good” looks like.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Measure</h3>
+            <p>Build the dataset, models, and visuals that actually answer it.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Advise</h3>
+            <p>Write the brief. Flag uncertainty. Recommend the next move.</p>
+          </article>
+        </aside>
+      </section>
+
+      <section id="work" class="bands">
+        <p class="eyebrow">Capabilities</p>
+        <h2>A toolkit built for decisions.</h2>
+        <div class="grid">
+          <article>
+            <h3>Analytics</h3>
+            <p>Python, SQL, R, Excel. Cohort analysis, forecasting, A/B tests, causal inference where the data allows it.</p>
+          </article>
+          <article>
+            <h3>Visualization</h3>
+            <p>Tableau, Power BI, and custom dashboards — designed for operators, not decoration.</p>
+          </article>
+          <article>
+            <h3>Research</h3>
+            <p>Desk research, stakeholder interviews, thematic coding, structured literature reviews.</p>
+          </article>
+          <article>
+            <h3>Communication</h3>
+            <p>Memos, slide narratives, and live briefings that keep methods honest and language plain.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="insights" class="quote">
+        <blockquote>
+          “If a finding cannot be explained in one paragraph, it is not ready
+          for a decision-maker.”
+        </blockquote>
+        <p class="attr">— Working principle</p>
+      </section>
+
+      <section id="comments" class="comments">
+        <div class="comments-intro">
+          <p class="eyebrow">Correspondence</p>
+          <h2>Leave a comment.</h2>
+          <p>
+            Questions, referrals, or a note on a dataset you’re wrestling with.
+            Messages stay on this page (saved in your browser).
+          </p>
+        </div>
+
+        <form id="comment-form" novalidate>
+          <div class="row">
+            <label>
+              Name
+              <input type="text" name="name" required maxlength="80" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required maxlength="120" placeholder="you@organization.com" />
+            </label>
+          </div>
+          <label>
+            Comment
+            <textarea name="message" required maxlength="800" rows="5" placeholder="What should we look at together?"></textarea>
+          </label>
+          <p class="form-error" id="form-error" hidden></p>
+          <button type="submit">Post comment</button>
+        </form>
+
+        <div class="thread">
+          <h3>Recent comments</h3>
+          <ul id="comment-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Abdul · Data Analyst &amp; Research Analyst</p>
+      <p>For engagements: write via the comment form above.</p>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
